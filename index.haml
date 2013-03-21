@@ -3,16 +3,25 @@
   %head
     %title jumbly_text
     :sass
+      $rotation: 1.5deg
+      body
+        width: 960px
+        margin: 40px auto
+        font-family: Ubuntu
+        font-weight: bold
+      div
+        border: 1px solid black
+        margin-bottom: 10px
       .jumbly
-        -webkit-transform: rotateZ(1.5deg)
-        -moz-transform: rotateZ(1.5deg)
-        -o-transform: rotateZ(1.5deg)
-        transform: rotateZ(1.5deg)
+        -webkit-transform: rotateZ($rotation)
+        -moz-transform: rotateZ($rotation)
+        -o-transform: rotateZ($rotation)
+        transform: rotateZ($rotation)
       .smooth
-        -webkit-transform: rotate3d(0, 0, 1, 1.5deg)
-        -moz-transform: rotate3d(0, 0, 1, 1.5deg)
-        -o-transform: rotate3d(0, 0, 1, 1.5deg)
-        transform: rotate3d(0, 0, 1, 1.5deg)
+        -webkit-transform: rotate3d(0, 0, 1, $rotation)
+        -moz-transform: rotate3d(0, 0, 1, $rotation)
+        -o-transform: rotate3d(0, 0, 1, $rotation)
+        transform: rotate3d(0, 0, 1, $rotation)
   %body
     .jumbly
       %p
